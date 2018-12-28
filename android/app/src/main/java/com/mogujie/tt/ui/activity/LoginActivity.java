@@ -182,7 +182,8 @@ public class LoginActivity extends TTBaseActivity {
                 LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View dialog_view = inflater.inflate(R.layout.tt_custom_dialog, null);
                 final EditText editText = (EditText)dialog_view.findViewById(R.id.dialog_edit_content);
-                editText.setText(SystemConfigSp.instance().getStrConfig(SystemConfigSp.SysCfgDimension.LOGINSERVER));
+                editText.setText(
+                        SystemConfigSp.instance().getStrConfig(SystemConfigSp.SysCfgDimension.LOGINSERVER));
                 TextView textText = (TextView)dialog_view.findViewById(R.id.dialog_title);
                 textText.setText(R.string.switch_login_server_title);
                 builder.setView(dialog_view);
